@@ -14,8 +14,8 @@ android {
 
         renderscriptTargetApi 20
 
-        ndk{
-            abiFilters "armeabi-v7a","arm64-v8a"
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
         }
     }
     buildTypes {
@@ -26,7 +26,7 @@ android {
     }
     sourceSets {
         main {
-            jniLibs.srcDirs  'src/main/libs'
+            jniLibs.srcDirs 'src/main/libs'
             jni.srcDirs = []
         }
     }
@@ -43,4 +43,5 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:23+'
     implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
     implementation project(':librestreaming')
+    implementation project(':libstreamer')
 }
